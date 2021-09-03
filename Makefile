@@ -4,8 +4,12 @@ EXEC = sort
 
 all: main.c sort.c
 	$(GCC) $(CFLAGS) -o $(EXEC) main.c sort.c
-	
+	$(GCC) $(CFLAGS) -DASCENDING
+
 #add ascending target here
+
+
+
 	
 test: all
 	./$(EXEC) testcases/inp1
