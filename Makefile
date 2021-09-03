@@ -1,10 +1,17 @@
 GCC=gcc
-CFLAGS=-std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror
+CFLAGS=-std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror 
 EXEC = sort
 
 all: main.c sort.c
-	$(GCC) $(CFLAGS) -o $(EXEC) main.c sort.c
-	$(GCC) $(CFLAGS) -DASCENDING
+	$(GCC) $(CFLAGS) -o $(EXEC) main.c sort.c 
+
+
+
+ascending: main.c sort.c
+	$(GCC) $(CFLAGS) -o -DASCENDING $(EXEC) main.c sort.c 
+
+
+
 
 #add ascending target here
 
