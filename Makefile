@@ -8,7 +8,7 @@ all: main.c sort.c
 
 
 ascending: main.c sort.c
-	$(GCC) $(CFLAGS) -o -DASCENDING $(EXEC) main.c sort.c 
+	$(GCC) $(CFLAGS) -o $(EXEC) main.c sort.c -DASCENDING
 
 
 
